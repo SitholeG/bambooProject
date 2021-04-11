@@ -15,7 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class InvoiceController {
 	@Autowired
 	InvoiceService invoiceService;
-	
+
+	@RequestMapping("/")
+	public String home(){
+		return "Hello";
+	}
+
 	@RequestMapping(value = "/invoice",  method = RequestMethod.POST)
 	public String addInvoice(@RequestBody Invoice invoiceEntity){
 		invoiceService.addInvoice(invoiceEntity);
