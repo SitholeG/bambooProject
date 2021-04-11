@@ -18,7 +18,7 @@ public class InvoiceController {
 
 	@RequestMapping("/")
 	public String home(){
-		return "Hello";
+		return "Hello Welcome to invoice";
 	}
 
 	@RequestMapping(value = "/invoice",  method = RequestMethod.POST)
